@@ -1,0 +1,8 @@
+.item {
+    font-size: 22px;
+}
+.item img{
+    color: greenyellow;
+    width: 50px;
+    border: solid 1px black;
+}
