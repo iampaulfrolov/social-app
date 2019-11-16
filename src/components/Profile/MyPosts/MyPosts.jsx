@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './MyPosts.module.css';
 import Post from "./Post/Post";
 import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/profileReducer";
+import Button from "@material-ui/core/Button";
 
 
 const MyPosts = (props) => {
@@ -29,7 +30,9 @@ const MyPosts = (props) => {
                     <textarea ref={ newPostElement } cols="30" rows="5" value={ props.newPostText } onChange={ onPostChange } />
                 </div>
                 <div>
-                    <button onClick={ onAddPost } >Add posts</button>
+                  <Button variant="outlined" color="secondary" className={classes.button} onClick={ onAddPost } >
+                    Add posts
+                  </Button>
                 </div>
             </div>
             <div className={classes.posts}>
