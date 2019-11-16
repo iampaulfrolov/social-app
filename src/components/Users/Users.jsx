@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./Users.module.css";
+import Button from "@material-ui/core/Button";
 
 const Users = props => {
   if (props.users.length === 0) {
@@ -44,9 +45,8 @@ const Users = props => {
           </div>
           <div>
             { u.followed
-              ? <button onClick={() => { props.unfollow(u.id)}}>Unfollow</button>
-              : <button onClick={() => { props.follow(u.id)}}>Follow</button>}
-
+              ? <Button variant="contained" color="secondary" onClick={() => { props.unfollow(u.id)}}>Unfollow</Button>
+              : <Button variant="contained" color="secondary" onClick={() => { props.follow(u.id)}}>Follow</Button>}
           </div>
         </span>
         <span>
